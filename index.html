@@ -60,25 +60,16 @@
           </div>
         </div>
         <div class="px-3 pb-3">
-          <form class="search-container">
-            <div class="input-group">
-              <input
-                id="searchInputMobile"
-                type="text"
-                class="form-control fw-semibold"
-                placeholder="Digite aqui oque você procura"
-              />
-              <button
-                class="btn btn-outline-secondary btn-search"
-                type="submit"
-              >
-                <img
-                  src="assets/images/icon-lupa.svg"
-                  alt="Buscar"
-                  height="18"
-                />
-              </button>
-            </div>
+          <form class="search-container position-relative">
+            <input
+              id="searchInputMobile"
+              type="text"
+              class="form-control search-with-icon fw-semibold"
+              placeholder="Digite aqui o que você procura"
+            />
+            <button class="btn-icon" type="submit">
+              <img src="assets/images/icon-lupa.svg" alt="Buscar" height="18" />
+            </button>
             <div id="searchFeedbackMobile" class="search-feedback d-none"></div>
           </form>
         </div>
@@ -141,72 +132,31 @@
 
       <!-- Menu de Categorias (desktop) -->
       <div class="bg-white border-top border-bottom py-2 d-none d-lg-block">
-        <div
-          class="container d-flex flex-wrap justify-content-center gap-4 dropdown-hover"
-        >
-          <div class="dropdown">
+        <div class="container d-flex flex-wrap align-items-center gap-4">
+          <!-- Todas as Categorias -->
+          <div class="position-relative dropdown">
             <a
               href="#"
-              class="text-decoration-none text-dark fw-medium dropdown-toggle"
-              data-bs-toggle="dropdown"
+              class="text-decoration-none text-dark fw-medium d-flex align-items-center categoria-trigger"
             >
               <img
                 src="assets/images/icon-menu.svg"
                 alt="Categorias"
                 height="22"
-                class="me-2"
+                class="me-2 icon-categoria"
               />
-              Todas as Categorias
+              <span class="text-categoria">Todas as Categorias</span>
             </a>
-            <div class="dropdown-menu p-3 mega-menu">
+
+            <!-- Mega Menu principal -->
+            <div class="dropdown-menu p-3 mega-menu shadow-lg">
               <div class="row">
-                <!-- Coluna 1: Departamentos -->
-                <div class="col-3">
-                  <h6 class="text-uppercase fw-bold mb-3 text-azul-vibrante">
-                    Departamento
-                  </h6>
-                  <ul class="list-unstyled mega-dept-list">
-                    <li><a href="#">Departamento</a></li>
+                <!-- Coluna 2 -->
+                <div class="col-3 submenu-categorias">
+                  <ul class="list-unstyled">
                     <li>
-                      <a href="#">Departamento</a>
-                      <img
-                        src="./assets/images/icon-menu-arrow.svg"
-                        alt="icon-menu-arrow"
-                      />
+                      <a href="#" class="text-azul-vibrante">Categoria</a>
                     </li>
-                    <li><a href="#">Departamento</a></li>
-                    <li><a href="#">Departamento</a></li>
-                    <li><a href="#">Departamento</a></li>
-                    <li><a href="#">Departamento</a></li>
-                    <li><a href="#">Departamento</a></li>
-                    <li><a href="#">Departamento</a></li>
-                    <li><a href="#">Departamento</a></li>
-                    <li><a href="#">Departamento</a></li>
-                  </ul>
-                </div>
-
-                <!-- Coluna 2 e 3: Categorias -->
-                <div class="col-3">
-                  <h6 class="text-uppercase fw-bold mb-3 text-azul-vibrante">
-                    Categoria
-                  </h6>
-                  <ul class="list-unstyled">
-                    <li><a href="#">Categoria</a></li>
-                    <li><a href="#">Categoria</a></li>
-                    <li><a href="#">Categoria</a></li>
-                    <li><a href="#">Categoria</a></li>
-                    <li><a href="#">Categoria</a></li>
-                    <li><a href="#">Categoria</a></li>
-                    <li><a href="#">Categoria</a></li>
-                    <li><a href="#">Categoria</a></li>
-                  </ul>
-                </div>
-                <div class="col-3">
-                  <h6 class="text-uppercase fw-bold mb-3 text-azul-vibrante">
-                    Categoria
-                  </h6>
-                  <ul class="list-unstyled">
-                    <li><a href="#">Categoria</a></li>
                     <li><a href="#">Categoria</a></li>
                     <li><a href="#">Categoria</a></li>
                     <li><a href="#">Categoria</a></li>
@@ -217,7 +167,39 @@
                   </ul>
                 </div>
 
-                <!-- Coluna 4: Banner -->
+                <!-- Coluna 3 -->
+                <div class="col-3 submenu-categorias">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" class="text-azul-vibrante">Categoria</a>
+                    </li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                  </ul>
+                </div>
+
+                <!-- Coluna 4 -->
+                <div class="col-3 submenu-categorias">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="#" class="text-azul-vibrante">Categoria</a>
+                    </li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                    <li><a href="#">Categoria</a></li>
+                  </ul>
+                </div>
+
+                <!-- Coluna 5: Banner -->
                 <div class="col-3">
                   <img
                     src="assets/images/banner-promo.png"
@@ -228,31 +210,614 @@
               </div>
             </div>
           </div>
-          <!-- Outras categorias (opcional) -->
-          <a href="#" class="text-decoration-none text-dark fw-medium"
-            >Departamento</a
-          >
-          <a href="#" class="text-decoration-none text-dark fw-medium"
-            >Departamento</a
-          >
-          <a href="#" class="text-decoration-none text-dark fw-medium"
-            >Departamento</a
-          >
-          <a href="#" class="text-decoration-none text-dark fw-medium"
-            >Departamento</a
-          >
-          <a href="#" class="text-decoration-none text-dark fw-medium"
-            >Departamento</a
-          >
-          <a href="#" class="text-decoration-none text-dark fw-medium"
-            >Departamento</a
-          >
-          <a href="#" class="text-decoration-none text-dark fw-medium"
-            >Departamento</a
-          >
-          <a href="#" class="text-decoration-none text-dark fw-medium"
-            >Departamento</a
-          >
+
+          <!-- Lista de Departamentos com dropdown individual -->
+          <div class="d-flex align-items-center gap-3">
+            <div class="dropdown position-relative">
+              <a
+                href="#"
+                class="text-decoration-none text-dark fw-medium dept-trigger d-flex align-items-center"
+              >
+                Departamento
+              </a>
+
+              <!-- Mega Menu por Departamento -->
+              <div class="dropdown-menu p-3 mega-menu shadow-lg">
+                <div class="row">
+                  <!-- Coluna 1 -->
+                  <div class="col-3 submenu-categorias">
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" class="text-azul-vibrante">Categoria</a>
+                      </li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Coluna 2 -->
+                  <div class="col-3 submenu-categorias">
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" class="text-azul-vibrante">Categoria</a>
+                      </li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Coluna 3 -->
+                  <div class="col-3 submenu-categorias">
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" class="text-azul-vibrante">Categoria</a>
+                      </li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                      <li><a href="#">Categoria</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Coluna 4: Banner -->
+                  <div class="col-3">
+                    <img
+                      src="assets/images/banner-promo.png"
+                      alt="Promoção"
+                      class="img-fluid rounded"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <div class="dropdown position-relative">
+                <a
+                  href="#"
+                  class="text-decoration-none text-dark fw-medium dept-trigger d-flex align-items-center"
+                >
+                  Departamento
+                </a>
+
+                <!-- Mega Menu por Departamento -->
+                <div class="dropdown-menu p-3 mega-menu shadow-lg">
+                  <div class="row">
+                    <!-- Coluna 1 -->
+                    <div class="col-3 submenu-categorias">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#" class="text-azul-vibrante">Categoria</a>
+                        </li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- Coluna 2 -->
+                    <div class="col-3 submenu-categorias">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#" class="text-azul-vibrante">Categoria</a>
+                        </li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- Coluna 3 -->
+                    <div class="col-3 submenu-categorias">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#" class="text-azul-vibrante">Categoria</a>
+                        </li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                        <li><a href="#">Categoria</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- Coluna 4: Banner -->
+                    <div class="col-3">
+                      <img
+                        src="assets/images/banner-promo.png"
+                        alt="Promoção"
+                        class="img-fluid rounded"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div class="dropdown position-relative">
+                  <a
+                    href="#"
+                    class="text-decoration-none text-dark fw-medium dept-trigger d-flex align-items-center"
+                  >
+                    Departamento
+                  </a>
+
+                  <!-- Mega Menu por Departamento -->
+                  <div class="dropdown-menu p-3 mega-menu shadow-lg">
+                    <div class="row">
+                      <!-- Coluna 1 -->
+                      <div class="col-3 submenu-categorias">
+                        <ul class="list-unstyled">
+                          <li>
+                            <a href="#" class="text-azul-vibrante">Categoria</a>
+                          </li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                        </ul>
+                      </div>
+
+                      <!-- Coluna 2 -->
+                      <div class="col-3 submenu-categorias">
+                        <ul class="list-unstyled">
+                          <li>
+                            <a href="#" class="text-azul-vibrante">Categoria</a>
+                          </li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                        </ul>
+                      </div>
+
+                      <!-- Coluna 3 -->
+                      <div class="col-3 submenu-categorias">
+                        <ul class="list-unstyled">
+                          <li>
+                            <a href="#" class="text-azul-vibrante">Categoria</a>
+                          </li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                          <li><a href="#">Categoria</a></li>
+                        </ul>
+                      </div>
+
+                      <!-- Coluna 4: Banner -->
+                      <div class="col-3">
+                        <img
+                          src="assets/images/banner-promo.png"
+                          alt="Promoção"
+                          class="img-fluid rounded"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <div class="dropdown position-relative">
+                    <a
+                      href="#"
+                      class="text-decoration-none text-dark fw-medium dept-trigger d-flex align-items-center"
+                    >
+                      Departamento
+                    </a>
+
+                    <!-- Mega Menu por Departamento -->
+                    <div class="dropdown-menu p-3 mega-menu shadow-lg">
+                      <div class="row">
+                        <!-- Coluna 1 -->
+                        <div class="col-3 submenu-categorias">
+                          <ul class="list-unstyled">
+                            <li>
+                              <a href="#" class="text-azul-vibrante"
+                                >Categoria</a
+                              >
+                            </li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                          </ul>
+                        </div>
+
+                        <!-- Coluna 2 -->
+                        <div class="col-3 submenu-categorias">
+                          <ul class="list-unstyled">
+                            <li>
+                              <a href="#" class="text-azul-vibrante"
+                                >Categoria</a
+                              >
+                            </li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                          </ul>
+                        </div>
+
+                        <!-- Coluna 3 -->
+                        <div class="col-3 submenu-categorias">
+                          <ul class="list-unstyled">
+                            <li>
+                              <a href="#" class="text-azul-vibrante"
+                                >Categoria</a
+                              >
+                            </li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                            <li><a href="#">Categoria</a></li>
+                          </ul>
+                        </div>
+
+                        <!-- Coluna 4: Banner -->
+                        <div class="col-3">
+                          <img
+                            src="assets/images/banner-promo.png"
+                            alt="Promoção"
+                            class="img-fluid rounded"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="dropdown position-relative">
+                      <a
+                        href="#"
+                        class="text-decoration-none text-dark fw-medium dept-trigger d-flex align-items-center"
+                      >
+                        Departamento
+                      </a>
+
+                      <!-- Mega Menu por Departamento -->
+                      <div class="dropdown-menu p-3 mega-menu shadow-lg">
+                        <div class="row">
+                          <!-- Coluna 1 -->
+                          <div class="col-3 submenu-categorias">
+                            <ul class="list-unstyled">
+                              <li>
+                                <a href="#" class="text-azul-vibrante"
+                                  >Categoria</a
+                                >
+                              </li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+
+                          <!-- Coluna 2 -->
+                          <div class="col-3 submenu-categorias">
+                            <ul class="list-unstyled">
+                              <li>
+                                <a href="#" class="text-azul-vibrante"
+                                  >Categoria</a
+                                >
+                              </li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+
+                          <!-- Coluna 3 -->
+                          <div class="col-3 submenu-categorias">
+                            <ul class="list-unstyled">
+                              <li>
+                                <a href="#" class="text-azul-vibrante"
+                                  >Categoria</a
+                                >
+                              </li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                              <li><a href="#">Categoria</a></li>
+                            </ul>
+                          </div>
+
+                          <!-- Coluna 4: Banner -->
+                          <div class="col-3">
+                            <img
+                              src="assets/images/banner-promo.png"
+                              alt="Promoção"
+                              class="img-fluid rounded"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="dropdown position-relative">
+                        <a
+                          href="#"
+                          class="text-decoration-none text-dark fw-medium dept-trigger d-flex align-items-center"
+                        >
+                          Departamento
+                        </a>
+
+                        <!-- Mega Menu por Departamento -->
+                        <div class="dropdown-menu p-3 mega-menu shadow-lg">
+                          <div class="row">
+                            <!-- Coluna 1 -->
+                            <div class="col-3 submenu-categorias">
+                              <ul class="list-unstyled">
+                                <li>
+                                  <a href="#" class="text-azul-vibrante"
+                                    >Categoria</a
+                                  >
+                                </li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                              </ul>
+                            </div>
+
+                            <!-- Coluna 2 -->
+                            <div class="col-3 submenu-categorias">
+                              <ul class="list-unstyled">
+                                <li>
+                                  <a href="#" class="text-azul-vibrante"
+                                    >Categoria</a
+                                  >
+                                </li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                              </ul>
+                            </div>
+
+                            <!-- Coluna 3 -->
+                            <div class="col-3 submenu-categorias">
+                              <ul class="list-unstyled">
+                                <li>
+                                  <a href="#" class="text-azul-vibrante"
+                                    >Categoria</a
+                                  >
+                                </li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                                <li><a href="#">Categoria</a></li>
+                              </ul>
+                            </div>
+
+                            <!-- Coluna 4: Banner -->
+                            <div class="col-3">
+                              <img
+                                src="assets/images/banner-promo.png"
+                                alt="Promoção"
+                                class="img-fluid rounded"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center gap-3">
+                        <div class="dropdown position-relative">
+                          <a
+                            href="#"
+                            class="text-decoration-none text-dark fw-medium dept-trigger d-flex align-items-center"
+                          >
+                            Departamento
+                          </a>
+
+                          <!-- Mega Menu por Departamento -->
+                          <div class="dropdown-menu p-3 mega-menu shadow-lg">
+                            <div class="row">
+                              <!-- Coluna 1 -->
+                              <div class="col-3 submenu-categorias">
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <a href="#" class="text-azul-vibrante"
+                                      >Categoria</a
+                                    >
+                                  </li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                </ul>
+                              </div>
+
+                              <!-- Coluna 2 -->
+                              <div class="col-3 submenu-categorias">
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <a href="#" class="text-azul-vibrante"
+                                      >Categoria</a
+                                    >
+                                  </li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                </ul>
+                              </div>
+
+                              <!-- Coluna 3 -->
+                              <div class="col-3 submenu-categorias">
+                                <ul class="list-unstyled">
+                                  <li>
+                                    <a href="#" class="text-azul-vibrante"
+                                      >Categoria</a
+                                    >
+                                  </li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                  <li><a href="#">Categoria</a></li>
+                                </ul>
+                              </div>
+
+                              <!-- Coluna 4: Banner -->
+                              <div class="col-3">
+                                <img
+                                  src="assets/images/banner-promo.png"
+                                  alt="Promoção"
+                                  class="img-fluid rounded"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="dropdown position-relative">
+                            <a
+                              href="#"
+                              class="text-decoration-none text-dark fw-medium dept-trigger d-flex align-items-center"
+                            >
+                              Departamento
+                            </a>
+
+                            <!-- Mega Menu por Departamento -->
+                            <div class="dropdown-menu p-3 mega-menu shadow-lg">
+                              <div class="row">
+                                <!-- Coluna 1 -->
+                                <div class="col-3 submenu-categorias">
+                                  <ul class="list-unstyled">
+                                    <li>
+                                      <a href="#" class="text-azul-vibrante"
+                                        >Categoria</a
+                                      >
+                                    </li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                  </ul>
+                                </div>
+
+                                <!-- Coluna 2 -->
+                                <div class="col-3 submenu-categorias">
+                                  <ul class="list-unstyled">
+                                    <li>
+                                      <a href="#" class="text-azul-vibrante"
+                                        >Categoria</a
+                                      >
+                                    </li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                  </ul>
+                                </div>
+
+                                <!-- Coluna 3 -->
+                                <div class="col-3 submenu-categorias">
+                                  <ul class="list-unstyled">
+                                    <li>
+                                      <a href="#" class="text-azul-vibrante"
+                                        >Categoria</a
+                                      >
+                                    </li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                    <li><a href="#">Categoria</a></li>
+                                  </ul>
+                                </div>
+
+                                <!-- Coluna 4: Banner -->
+                                <div class="col-3">
+                                  <img
+                                    src="assets/images/banner-promo.png"
+                                    alt="Promoção"
+                                    class="img-fluid rounded"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>

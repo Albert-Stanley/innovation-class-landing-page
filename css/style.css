@@ -123,23 +123,44 @@ h3 {
   transform: translateX(-50%);
 }
 
-/* Campo de busca responsivo */
+/* Campo de busca com ícone dentro */
 .search-container {
+  position: relative;
+  flex-grow: 1;
   max-width: 100%;
 }
+
 @media (min-width: 992px) {
   .search-container {
-    max-width: 500px;
+    max-width: 700px;
     margin-left: 20px;
+    margin-right: 90px;
   }
 }
 
-/* Campo de busca com ícone dentro */
+@media (max-width: 991.98px) {
+  .mobile-header + .px-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search-feedback {
+    order: 1;
+  }
+
+  .search-container {
+    order: 0;
+  }
+}
+
 .search-with-icon {
-  padding-right: 2.5rem; /* Espaço para a lupa */
+  padding-right: 2.5rem;
+  min-height: 40px;
 }
 
 .btn-icon {
+  position: absolute;
   top: 50%;
   right: 0.75rem;
   transform: translateY(-50%);
@@ -147,70 +168,200 @@ h3 {
   border: none;
   padding: 0;
   cursor: pointer;
+  z-index: 2;
+}
+
+.search-feedback {
+  padding-top: 1rem;
+  font-size: 14px;
+  color: #000000;
+  display: block;
+  margin-bottom: -1.2rem;
 }
 
 /* ====================================
    COMPONENTES
 ==================================== */
-.search-feedback {
-  margin-top: 0.5rem;
-  font-size: 14px;
-  color: #00264e;
-  display: block;
-}
-
 .badge-desconto {
   font-weight: 700;
   border-radius: 0.25rem;
 }
 
-/* ====================================
-   MENU HOVER DESKTOP
-==================================== */
-.dropdown-hover:hover .dropdown-menu {
-  display: block;
-}
-.dropdown-hover {
-  position: relative;
-}
-.dropdown-hover .dropdown-menu {
-  display: none;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  min-width: 200px;
-  position: absolute;
-}
+/* ========== Menu Hover Desktop ========== */
 
-/* Mega menu estilo */
-.mega-menu {
-  width: 1000px;
-  left: 0;
-  right: 0;
-  top: 100%;
-  position: absolute;
-  background-color: #fff;
-  border-top: 2px solid #005cff;
-  z-index: 1050;
-  display: none;
-}
-
+/* Exibe mega menu ao passar o mouse */
+.dropdown-hover:hover .dropdown-menu,
 .dropdown:hover .mega-menu {
   display: block;
 }
 
-.mega-dept-list li a {
-  display: block;
-  padding: 4px 0;
-  color: #333;
+/* Menu base */
+.dropdown-hover {
+  position: relative;
+}
+
+.dropdown-hover .dropdown-menu,
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mega Menu Principal */
+.mega-menu {
+  min-width: 1000px;
+  padding: 1.5rem;
+  border-top: 2px solid #005cff;
+}
+
+/* Espaçamento entre colunas do mega menu */
+.mega-menu .col-3 {
+  padding: 0 1rem;
+}
+
+/* Categoria Hover */
+.categoria-trigger {
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+
+/* Remove seta dropdown de "Todas as Categorias" */
+.categoria-trigger::after {
+  content: none !important;
+}
+
+/* Hover azul apenas no primeiro item de cada coluna */
+.submenu-categorias ul li:first-child a:hover {
+  color: #005cff;
   text-decoration: none;
 }
 
-.mega-dept-list li a:hover {
-  color: #005cff;
-  font-weight: 600;
+/* Remove sublinhado de todos os itens */
+.submenu-categorias ul li a {
+  text-decoration: none;
+  color: #000;
 }
 
-.dropdown:hover > a {
-  color: #005cff !important;
+.submenu-categorias ul li a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Hover azul no primeiro item da coluna */
+.submenu-categorias ul li:first-child a:hover {
+  color: #005cff;
+}
+
+/* Seta azul ao hover dos departamentos */
+.dept-item:hover .icon-arrow {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(99%) saturate(3865%)
+    hue-rotate(213deg) brightness(97%) contrast(102%);
+}
+
+/* Link departamentos */
+.dept-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #000;
+  padding: 6px 0;
+}
+
+.dept-link:hover {
+  color: #005cff;
+}
+
+/* Submenu dos departamentos (super menu) */
+.dept-item {
+  position: relative;
+}
+
+.dept-item:hover .mega-submenu {
+  display: block;
+}
+
+.mega-submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 750px;
+  background: #fff;
+  padding: 1rem;
+  border-left: 2px solid #005cff;
+  z-index: 999;
+}
+
+/* Banner lateral no mega menu */
+.mega-menu .banner-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mega-menu .banner-col img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Layout das colunas internas do submenu */
+.mega-submenu .col {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+.mega-submenu .col h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #005cff;
+  margin-bottom: 0.75rem;
+}
+
+.mega-submenu .col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-submenu .col ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mega-submenu .col ul li:first-child a:hover {
+  color: #005cff;
+  font-weight: 500;
+}
+
+.mega-submenu .col ul li a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Cor azul ao passar o mouse em "Todas as Categorias" */
+.categoria-trigger:hover {
+  color: #005cff;
+}
+
+/* Cor azul ao passar o mouse nos links de Departamento ao lado */
+.dept-link:hover {
+  color: #005cff;
+}
+
+/* Ativo (mouse sobre ou submenu aberto) */
+.categoria-trigger.active,
+.categoria-trigger:hover,
+.dept-link.active,
+.dept-link:hover {
+  color: #005cff;
 }
