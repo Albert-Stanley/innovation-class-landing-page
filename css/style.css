@@ -1,6 +1,4 @@
-/* ====================================
-   RESET & BASE
-==================================== */
+/* RESET E BASE */
 body {
   font-family: "Nunito Sans", sans-serif;
   color: #000000;
@@ -43,13 +41,7 @@ body {
 .text-azul-marinho {
   color: #00264e !important;
 }
-
-/* ====================================
-   TIPOGRAFIA
-==================================== */
-.fs-12 {
-  font-size: 12px;
-}
+/* TIPOGRAFIA */
 .fs-14 {
   font-size: 14px;
 }
@@ -59,21 +51,11 @@ body {
 .fs-30 {
   font-size: 30px;
 }
-
-.lh-1 {
-  line-height: 16px;
-}
-.lh-16 {
-  line-height: 16px;
-}
 .lh-20 {
   line-height: 20px;
 }
 .lh-26 {
   line-height: 26px;
-}
-.lh-36 {
-  line-height: 36px;
 }
 
 h1,
@@ -85,9 +67,7 @@ h3 {
   line-height: 1.2;
 }
 
-/* ====================================
-   BOTÕES
-==================================== */
+/* BOTÕES */
 .btn-custom {
   background-color: #005cff;
   color: #fff;
@@ -100,16 +80,7 @@ h3 {
   background-color: #003fcc;
 }
 
-/* ====================================
-   ESPAÇAMENTO
-==================================== */
-.section-padding {
-  padding: 60px 0;
-}
-
-/* ====================================
-   HEADER RESPONSIVO
-==================================== */
+/* HEADER RESPONSIVO */
 .mobile-header {
   display: flex;
   justify-content: space-between;
@@ -122,14 +93,11 @@ h3 {
   left: 50%;
   transform: translateX(-50%);
 }
-
-/* Campo de busca com ícone dentro */
 .search-container {
   position: relative;
   flex-grow: 1;
   max-width: 100%;
 }
-
 @media (min-width: 992px) {
   .search-container {
     max-width: 700px;
@@ -137,28 +105,23 @@ h3 {
     margin-right: 90px;
   }
 }
-
 @media (max-width: 991.98px) {
   .mobile-header + .px-3 {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
-
   .search-feedback {
     order: 1;
   }
-
   .search-container {
     order: 0;
   }
 }
-
 .search-with-icon {
   padding-right: 2.5rem;
   min-height: 40px;
 }
-
 .btn-icon {
   position: absolute;
   top: 50%;
@@ -170,7 +133,6 @@ h3 {
   cursor: pointer;
   z-index: 2;
 }
-
 .search-feedback {
   padding-top: 1rem;
   font-size: 14px;
@@ -179,25 +141,7 @@ h3 {
   margin-bottom: -1.2rem;
 }
 
-/* ====================================
-   COMPONENTES
-==================================== */
-.badge-desconto {
-  font-weight: 700;
-  border-radius: 0.25rem;
-}
-
-/* ========== Menu Hover Desktop ========== */
-
-/* Exibe mega menu ao passar o mouse */
-.dropdown-menu,
-.dropdown:hover .mega-menu {
-  display: block;
-  color: #005cff;
-}
-
-/* Menu base */
-
+/* MENU DESKTOP */
 .dropdown-menu,
 .mega-menu {
   display: none;
@@ -207,114 +151,136 @@ h3 {
   z-index: 1000;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
-
-/* Mega Menu Principal */
-.mega-menu {
-  min-width: 1000px;
-  padding: 1.5rem;
-  border-top: 2px solid #005cff;
+.dropdown:hover .mega-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
-
-/* Espaçamento entre colunas do mega menu */
-.mega-menu .col-3 {
-  padding: 0 1rem;
+.dropdown:hover .text-categoria {
+  color: #005cff !important;
+  font-weight: 700 !important;
 }
-
-/* Categoria Hover */
-.categoria-trigger {
-  cursor: pointer;
-  position: relative;
-  padding-right: 20px;
-}
-
-/* Remove seta dropdown de "Todas as Categorias" */
-.categoria-trigger::after {
-  content: none !important;
-}
-
-/* Hover azul apenas no primeiro item de cada coluna */
-.submenu-categorias ul li:first-child a:hover {
-  color: #005cff;
-  text-decoration: none;
-}
-
-/* Remove sublinhado de todos os itens */
-.submenu-categorias ul li a {
-  text-decoration: none;
-  color: #000;
-}
-
-.submenu-categorias ul li a:hover {
-  text-decoration: none;
-  color: #000;
-}
-
-/* Hover azul no primeiro item da coluna */
-.submenu-categorias ul li:first-child a:hover {
-  color: #005cff;
-}
-
-/* Seta azul ao hover dos departamentos */
-.dept-item:hover .icon-arrow {
+.dropdown:hover .icon-categoria {
   filter: brightness(0) saturate(100%) invert(22%) sepia(99%) saturate(3865%)
     hue-rotate(213deg) brightness(97%) contrast(102%);
 }
 
-/* Link departamentos */
+/* MEGA MENU PRINCIPAL */
+.mega-menu {
+  padding-top: 1rem;
+  min-width: 1100px;
+  padding: 1.5rem;
+  width: 100%;
+}
+.mega-menu .col-3 {
+  padding: 0 1rem;
+}
+
+/* SUBMENU CATEGORIAS */
+.submenu-categorias ul li a {
+  text-decoration: none;
+  color: #656565;
+  font-size: 14px;
+}
+
+.submenu-categorias ul li a:hover {
+  color: #005cff !important;
+  font-weight: 700 !important;
+}
+
+/* TEXTO CATEGORIA */
+.text-categoria {
+  font-weight: 700;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+.icon-categoria {
+  transition: filter 0.3s ease;
+}
+.categoria-trigger:hover .text-categoria {
+  color: #005cff !important;
+  font-weight: 700 !important;
+}
+.categoria-trigger:hover .icon-categoria {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(99%) saturate(3865%)
+    hue-rotate(213deg) brightness(97%) contrast(102%);
+}
+
+/* DEPARTAMENTOS */
+.mega-dept-list {
+  background-color: #f5f5f5;
+  width: 100%;
+  border-radius: 5px;
+  padding-right: -2rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0rem;
+}
+
+.dept-trigger {
+  font-weight: 400;
+  font-size: 14px;
+  padding-left: 40px;
+}
+.dept-trigger:hover {
+  color: #005cff !important;
+  font-weight: 700 !important;
+}
 .dept-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  color: #000;
+  font-size: 14px;
+  color: #303030;
   padding: 6px 0;
+  transition: all 0.3s ease;
 }
-
 .dept-link:hover {
-  color: #005cff;
+  color: #005cff !important;
+  font-weight: 700 !important;
 }
-
-/* Submenu dos departamentos (super menu) */
 .dept-item {
   position: relative;
 }
-
-.dept-item:hover .mega-submenu {
+.dept-item:hover .mega-departamento {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.dept-item:hover .icon-arrow {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(99%) saturate(3865%)
+    hue-rotate(213deg) brightness(97%) contrast(102%);
 }
 
+/* MEGA SUBMENU */
 .mega-submenu {
   display: none;
   position: absolute;
   top: 0;
   left: 100%;
-  width: 750px;
+  width: 100%;
   background: #fff;
   padding: 1rem;
-  border-left: 2px solid #005cff;
   z-index: 999;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
-
-/* Banner lateral no mega menu */
-.mega-menu .banner-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.dept-item:hover .mega-submenu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
-
-.mega-menu .banner-col img {
-  max-width: 100%;
-  border-radius: 0.5rem;
-}
-
-/* Layout das colunas internas do submenu */
 .mega-submenu .col {
   float: left;
   width: 33.33%;
   padding: 0 10px;
 }
-
 .mega-submenu .col h6 {
   font-size: 14px;
   text-transform: uppercase;
@@ -322,44 +288,45 @@ h3 {
   color: #005cff;
   margin-bottom: 0.75rem;
 }
-
 .mega-submenu .col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .mega-submenu .col ul li a {
   text-decoration: none;
   color: #000;
   font-size: 14px;
   line-height: 1.6;
 }
-
-.mega-submenu .col ul li:first-child a:hover {
-  color: #005cff;
-  font-weight: 500;
-}
-
 .mega-submenu .col ul li a:hover {
-  color: #000;
-  text-decoration: none;
+  color: #005cff !important;
+  font-weight: 700 !important;
 }
 
-/* Cor azul ao passar o mouse em "Todas as Categorias" */
-.categoria-trigger:hover {
-  color: #005cff;
+/* MENU DEPARTAMENTO */
+.menu-departamento {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 10%;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
 
-/* Cor azul ao passar o mouse nos links de Departamento ao lado */
-.dept-link:hover {
-  color: #005cff;
+.dept-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Ativo (mouse sobre ou submenu aberto) */
-.categoria-trigger.active,
-.categoria-trigger:hover,
-.dept-link.active,
-.dept-link:hover {
-  color: #005cff;
+.dept-group:hover .menu-departamento {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
