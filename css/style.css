@@ -190,17 +190,15 @@ h3 {
 /* ========== Menu Hover Desktop ========== */
 
 /* Exibe mega menu ao passar o mouse */
-.dropdown-hover:hover .dropdown-menu,
+.dropdown-menu,
 .dropdown:hover .mega-menu {
   display: block;
+  color: #005cff;
 }
 
 /* Menu base */
-.dropdown-hover {
-  position: relative;
-}
 
-.dropdown-hover .dropdown-menu,
+.dropdown-menu,
 .mega-menu {
   display: none;
   position: absolute;
