@@ -105,6 +105,17 @@ h3 {
     margin-right: 90px;
   }
 }
+
+.tag-desconto10 {
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .tag-desconto10 {
+    font-style: normal;
+  }
+}
+
 @media (max-width: 991.98px) {
   .mobile-header + .px-3 {
     display: flex;
@@ -154,6 +165,13 @@ h3 {
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
+  width: 100%;
+  min-width: 1300px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 .dropdown:hover .mega-menu {
   display: block;
@@ -171,13 +189,43 @@ h3 {
 
 /* MEGA MENU PRINCIPAL */
 .mega-menu {
+  width: 90vw; /* largura da viewport */
   padding-top: 1rem;
   min-width: 1100px;
   padding: 1.5rem;
   width: 100%;
+  display: none;
+  position: absolute;
+  left: 0 !important;
+  top: 100%;
+  z-index: 1000;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-.mega-menu .col-3 {
+
+.dropdown-menu.mega-menu {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.mega-menu.show {
+  display: block;
+}
+
+.mega-menu .col-2 {
   padding: 0 1rem;
+}
+
+.mega-menu .col-2:first-child {
+  padding-left: 0;
+  margin-left: -0.8rem;
+}
+
+.banner-col {
+  margin-left: auto;
+  padding-right: 16px;
 }
 
 /* SUBMENU CATEGORIAS */
@@ -197,6 +245,7 @@ h3 {
   font-weight: 700;
   font-size: 14px;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 .icon-categoria {
   transition: filter 0.3s ease;
@@ -212,13 +261,37 @@ h3 {
 
 /* DEPARTAMENTOS */
 .mega-dept-list {
-  background-color: #f5f5f5;
   width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scroll-departamentos {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 4px;
+  background-color: #f5f5f5;
   border-radius: 5px;
-  padding-right: -2rem;
-  padding-left: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: block;
+  width: 250px;
+  position: relative;
+}
+/* Scroll visível no WebKit */
+.scroll-departamentos::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll-departamentos::-webkit-scrollbar-thumb {
+  background-color: #c2c2c2;
+  border-radius: 4px;
+}
+
+.scroll-departamentos::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .dept-trigger {
@@ -255,6 +328,11 @@ h3 {
 .dept-item:hover .icon-arrow {
   filter: brightness(0) saturate(100%) invert(22%) sepia(99%) saturate(3865%)
     hue-rotate(213deg) brightness(97%) contrast(102%);
+}
+
+.icon-arrow {
+  padding-right: 10px;
+  margin-left: 5rem;
 }
 
 /* MEGA SUBMENU */
