@@ -30,21 +30,3 @@ document.addEventListener("DOMContentLoaded", function () {
     ".d-lg-flex .search-container"
   );
 });
-
-const trigger = document.querySelector(".categoria-trigger");
-const menu = document.querySelector(".mega-menu");
-
-trigger.addEventListener("mouseenter", () => {
-  menu.classList.add("show");
-});
-
-trigger.addEventListener("mouseleave", (e) => {
-  // Se o mouse não for para dentro do menu, oculta
-  if (!menu.contains(e.relatedTarget)) {
-    menu.classList.remove("show");
-  }
-});
-
-menu.addEventListener("mouseleave", () => {
-  menu.classList.remove("show");
-});

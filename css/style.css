@@ -98,6 +98,7 @@ h3 {
   flex-grow: 1;
   max-width: 100%;
 }
+
 @media (min-width: 992px) {
   .search-container {
     max-width: 700px;
@@ -132,6 +133,7 @@ h3 {
 .search-with-icon {
   padding-right: 2.5rem;
   min-height: 40px;
+  border-radius: 10px;
 }
 .btn-icon {
   position: absolute;
@@ -152,123 +154,85 @@ h3 {
   margin-bottom: -1.2rem;
 }
 
-/* MENU DESKTOP */
-.dropdown-menu,
+/* Estilos Gerais */
 .mega-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1000;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  width: 100%;
-  min-width: 1300px;
+  min-width: 1100px;
+  max-width: 1400px;
+  width: 90vw;
+  padding: 0;
+  z-index: 1000;
+  margin: 0;
+}
+
+.categories-dropdown {
+  position: relative;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
 }
-.dropdown:hover .mega-menu {
+
+/* Dropdown de Categorias */
+.categories-dropdown:hover .categories-menu {
   display: block;
   opacity: 1;
-  transform: translateY(0);
-}
-.dropdown:hover .text-categoria {
-  color: #005cff !important;
-  font-weight: 700 !important;
-}
-.dropdown:hover .icon-categoria {
-  filter: brightness(0) saturate(100%) invert(22%) sepia(99%) saturate(3865%)
-    hue-rotate(213deg) brightness(97%) contrast(102%);
+  visibility: visible;
 }
 
-/* MEGA MENU PRINCIPAL */
-.mega-menu {
-  width: 90vw; /* largura da viewport */
-  padding-top: 1rem;
-  min-width: 1100px;
-  padding: 1.5rem;
-  width: 100%;
-  display: none;
-  position: absolute;
-  left: 0 !important;
-  top: 100%;
-  z-index: 1000;
-  max-width: 1400px;
-  margin: 0 auto;
+.categories-trigger {
+  transition: color 0.3s ease;
 }
 
-.dropdown-menu.mega-menu {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.mega-menu.show {
-  display: block;
-}
-
-.mega-menu .col-2 {
-  padding: 0 1rem;
-}
-
-.mega-menu .col-2:first-child {
-  padding-left: 0;
-  margin-left: -0.8rem;
-}
-
-.banner-col {
-  margin-left: auto;
-  padding-right: 16px;
-}
-
-/* SUBMENU CATEGORIAS */
-.submenu-categorias ul li a {
-  text-decoration: none;
-  color: #656565;
-  font-size: 14px;
-}
-
-.submenu-categorias ul li a:hover {
-  color: #005cff !important;
-  font-weight: 700 !important;
-}
-
-/* TEXTO CATEGORIA */
-.text-categoria {
+.categories-text {
+  white-space: nowrap;
   font-weight: 700;
   font-size: 14px;
-  transition: color 0.3s ease;
-  white-space: nowrap;
 }
-.icon-categoria {
-  transition: filter 0.3s ease;
-}
-.categoria-trigger:hover .text-categoria {
-  color: #005cff !important;
-  font-weight: 700 !important;
-}
-.categoria-trigger:hover .icon-categoria {
+
+.categories-trigger:hover,
+.categories-trigger:hover .categories-text,
+.categories-trigger:hover .categories-icon {
+  color: #005cff;
+  /* Altera a cor do texto e do ícone */
+  font-weight: 700;
   filter: brightness(0) saturate(100%) invert(22%) sepia(99%) saturate(3865%)
     hue-rotate(213deg) brightness(97%) contrast(102%);
 }
 
-/* DEPARTAMENTOS */
-.mega-dept-list {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.categories-icon {
+  transition: filter 0.3s ease;
 }
 
-.scroll-departamentos {
+.categories-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 1100px;
+  max-width: 1400px;
+  width: 90vw;
+  padding: 0; /* Remova o padding geral do menu */
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  display: flex; /* Use flexbox para controlar o layout das colunas */
+}
+
+.departments-column {
+  position: relative;
+  padding-left: 0; /* Remova o padding esquerdo da coluna */
+  margin-left: 0; /* Remova a margem esquerda da coluna */
+}
+
+.departments-scroll {
   max-height: 400px;
   overflow-y: auto;
   padding-right: 4px;
@@ -276,34 +240,33 @@ h3 {
   border-radius: 5px;
   padding: 1rem;
   box-sizing: border-box;
-  display: block;
   width: 250px;
+}
+
+.subcategories-column ul li {
+  padding: 0.1rem 2rem;
+  margin-right: 1rem;
+}
+
+.subcategories-column:first-child {
+  padding-left: 1rem;
+  margin-left: 0;
+}
+
+.banner-column {
+  margin-left: auto;
+  padding-right: 1rem;
+}
+
+.departments-list {
+  padding-left: 0.5rem;
+}
+
+.department-item {
   position: relative;
 }
-/* Scroll visível no WebKit */
-.scroll-departamentos::-webkit-scrollbar {
-  width: 6px;
-}
 
-.scroll-departamentos::-webkit-scrollbar-thumb {
-  background-color: #c2c2c2;
-  border-radius: 4px;
-}
-
-.scroll-departamentos::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.dept-trigger {
-  font-weight: 400;
-  font-size: 14px;
-  padding-left: 40px;
-}
-.dept-trigger:hover {
-  color: #005cff !important;
-  font-weight: 700 !important;
-}
-.dept-link {
+.department-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -313,30 +276,20 @@ h3 {
   padding: 6px 0;
   transition: all 0.3s ease;
 }
-.dept-link:hover {
-  color: #005cff !important;
-  font-weight: 700 !important;
-}
-.dept-item {
-  position: relative;
-}
-.dept-item:hover .mega-departamento {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-.dept-item:hover .icon-arrow {
-  filter: brightness(0) saturate(100%) invert(22%) sepia(99%) saturate(3865%)
-    hue-rotate(213deg) brightness(97%) contrast(102%);
+
+.department-link:hover,
+.department-link:hover .arrow-icon {
+  color: #005cff;
+  font-weight: 700;
 }
 
-.icon-arrow {
+.arrow-icon {
   padding-right: 10px;
   margin-left: 5rem;
+  transition: filter 0.3s ease;
 }
 
-/* MEGA SUBMENU */
-.mega-submenu {
+.department-submenu {
   display: none;
   position: absolute;
   top: 0;
@@ -344,67 +297,103 @@ h3 {
   width: 100%;
   background: #fff;
   padding: 1rem;
-  z-index: 999;
+  z-index: 1;
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
 }
-.dept-item:hover .mega-submenu {
+
+.department-item:hover .department-submenu {
   display: block;
   opacity: 1;
   transform: translateY(0);
 }
-.mega-submenu .col {
-  float: left;
-  width: 33.33%;
-  padding: 0 10px;
-}
-.mega-submenu .col h6 {
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #005cff;
+
+.submenu-title {
+  font-size: 16px;
+  font-weight: 700;
   margin-bottom: 0.75rem;
 }
-.mega-submenu .col ul {
+
+.submenu-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.mega-submenu .col ul li a {
+
+.submenu-list li a {
   text-decoration: none;
   color: #000;
   font-size: 14px;
-  line-height: 1.6;
-}
-.mega-submenu .col ul li a:hover {
-  color: #005cff !important;
-  font-weight: 700 !important;
+  line-height: 100%;
 }
 
-/* MENU DEPARTAMENTO */
-.menu-departamento {
+.submenu-list li a:hover {
+  color: #005cff;
+  font-weight: 700;
+}
+
+.subcategories-list li a {
+  color: #656565;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.subcategories-list li a:hover {
+  color: #005cff;
+  font-weight: 700;
+}
+
+.subcategories-column {
+  padding: 0.5rem 2rem;
+}
+
+.subcategories-column:first-child {
+  padding-left: 0;
+  margin-left: -0.8rem;
+}
+
+.banner-column {
+  margin-left: auto;
+  padding-right: 16px;
+}
+
+/* Menu de Departamentos */
+.departments-menu {
+  position: relative;
+}
+
+.department-trigger {
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+  margin: 0 0.5rem;
+  display: inline-block;
+  color: #000000;
+  font-size: 14px;
+}
+
+.department-trigger:hover {
+  color: #005cff;
+  font-weight: 700;
+}
+
+.shared-department-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  width: 10%;
-  z-index: 1000;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
-.dept-group {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.dept-group:hover .menu-departamento {
+.departments-menu:hover .shared-department-menu {
   display: block;
-  opacity: 1;
-  transform: translateY(0);
+}
+
+.menu-departamento-img-banner {
+  margin-top: 0;
+  margin-right: 1rem;
 }
