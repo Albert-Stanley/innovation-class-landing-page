@@ -31,6 +31,9 @@ body {
 .bg-roxo {
   background-color: #6220c1 !important;
 }
+.bg-cinza-claro-banner {
+  background-color: #e7e7ea !important;
+}
 
 .text-verde {
   color: #5ec0be !important;
@@ -48,14 +51,27 @@ body {
 .fs-18 {
   font-size: 18px;
 }
+.fs-25 {
+  font-size: 25px;
+}
 .fs-30 {
   font-size: 30px;
+}
+.fs-60 {
+  font-size: 60px;
+}
+.fs-100 {
+  font-size: 100px;
 }
 .lh-20 {
   line-height: 20px;
 }
 .lh-26 {
   line-height: 26px;
+}
+
+.letter-spacing-30 {
+  letter-spacing: 0.3em; /* 30% seria 0.3 vezes o tamanho da fonte */
 }
 
 h1,
@@ -360,8 +376,8 @@ h3 {
 
 .department-trigger {
   transition: all 0.3s ease;
-  padding: 0.5rem 0;
-  margin: 0 0.5rem;
+  padding: 0;
+  margin: 0 1rem;
   display: inline-block;
   color: #000000;
   font-size: 14px;
@@ -391,4 +407,36 @@ h3 {
   margin-top: -2rem !important;
   margin-bottom: 0;
   margin-right: 1rem;
+}
+
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS PARA O BANNER COM A CADEIRA
+   ========================================================================== */
+.fw-light {
+  font-weight: lighter; /* Ou 300, se preferir */
+}
+
+.banner-centralizado-esquerda {
+  display: flex; /* Transforma o container em flex */
+  align-items: center; /* Alinha verticalmente os itens ao centro */
+  justify-content: center; /* Centraliza horizontalmente os itens */
+  text-align: center; /* Centraliza o texto dentro da coluna de texto */
+}
+
+.banner-imagem-esquerda {
+  /* Ajuste a largura conforme necessário */
+  width: 40%; /* Exemplo: Reduz a largura da imagem para dar mais espaço ao texto centralizado */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente dentro da sua coluna */
+}
+
+.banner-imagem-esquerda img {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner-centralizado-esquerda .col-md-6:last-child {
+  /* Remove o padding-left, já que o texto agora está centralizado */
+  padding-left: 0;
+  width: 60%; /* Exemplo: Aumenta a largura da coluna de texto */
 }
