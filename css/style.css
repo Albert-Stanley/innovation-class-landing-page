@@ -268,6 +268,8 @@ h3 {
 .banner-column {
   margin-left: auto;
   padding-right: 1rem;
+  width: auto;
+  border-radius: 10px;
 }
 
 .departments-list {
@@ -364,11 +366,6 @@ h3 {
   gap: 1rem;
 }
 
-.banner-column {
-  margin-left: auto;
-  padding-right: 16px;
-}
-
 /* Menu de Departamentos */
 .departments-menu {
   position: relative;
@@ -407,36 +404,118 @@ h3 {
   margin-top: -2rem !important;
   margin-bottom: 0;
   margin-right: 1rem;
+} /* ==========================================================================
+BANNER ESTILOS - MOBILE PRIMEIRO (< 768px)
+========================================================================= */
+
+.bg-cinza-claro-banner {
+  background-color: #d9d9d9;
 }
 
-/* ==========================================================================
-   ESTILOS ESPECÍFICOS PARA O BANNER COM A CADEIRA
-   ========================================================================== */
-.fw-light {
-  font-weight: lighter; /* Ou 300, se preferir */
-}
-
-.banner-centralizado-esquerda {
-  display: flex; /* Transforma o container em flex */
-  align-items: center; /* Alinha verticalmente os itens ao centro */
-  justify-content: center; /* Centraliza horizontalmente os itens */
-  text-align: center; /* Centraliza o texto dentro da coluna de texto */
-}
-
-.banner-imagem-esquerda {
-  /* Ajuste a largura conforme necessário */
-  width: 40%; /* Exemplo: Reduz a largura da imagem para dar mais espaço ao texto centralizado */
+.banner-imagem-esquerda,
+.banner-texto {
   display: flex;
-  justify-content: center; /* Centraliza a imagem horizontalmente dentro da sua coluna */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centraliza vertical e horizontalmente */
+  height: 306px; /* Altura específica para mobile */
+  padding: 0 20px; /* Adiciona padding lateral */
+}
+
+/* --- Coluna da Imagem (Mobile) --- */
+.banner-imagem-esquerda {
+  overflow: hidden;
 }
 
 .banner-imagem-esquerda img {
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* Garante que a imagem preencha a largura */
+  height: 100%;
+  object-fit: cover;
+  object-position: 80% 50%;
 }
 
-.banner-centralizado-esquerda .col-md-6:last-child {
-  /* Remove o padding-left, já que o texto agora está centralizado */
-  padding-left: 0;
-  width: 60%; /* Exemplo: Aumenta a largura da coluna de texto */
+/* --- Coluna de Texto (Mobile) --- */
+.banner-texto {
+  text-align: center;
+}
+
+/* --- Fontes e Estilos (Mobile) --- */
+.fs-100 {
+  font-size: 40px;
+  line-height: 0.9;
+}
+
+.fs-25 {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.fs-60 {
+  font-size: 32px;
+}
+
+.fs-100 .fw-light {
+  display: block;
+}
+
+/* --- Pesos de Fonte --- */
+.fw-light {
+  font-weight: 300;
+}
+
+/* --- Espaçamento de Letras (Mobile) --- */
+.letter-spacing-30 {
+  letter-spacing: 1.5px;
+}
+
+/* ==========================================================================
+BANNER ESTILOS - TELAS MÉDIAS E ACIMA (>= 768px)
+========================================================================= */
+@media (min-width: 768px) {
+  .banner-imagem-esquerda,
+  .banner-texto {
+    height: auto;
+    padding: 0 30px;
+  }
+
+  /* --- Coluna da Imagem (Desktop Reset) --- */
+  .banner-imagem-esquerda {
+    overflow: visible;
+  }
+
+  .banner-imagem-esquerda img {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  /* --- Fontes e Estilos (Desktop/Web) --- */
+  .fs-100 {
+    font-size: 100px;
+    line-height: normal;
+  }
+
+  .fs-25 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .fs-60 {
+    font-size: 60px;
+  }
+
+  .fs-100 .fw-light {
+    display: inline;
+  }
+
+  /* --- Espaçamento de Letras (Desktop) --- */
+  .letter-spacing-30 {
+    letter-spacing: 3px;
+  }
+}
+
+/* --- Ajuste para Telas Médias (768px - 1200px) --- */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .fs-100 {
+    font-size: 60px;
+  }
 }
