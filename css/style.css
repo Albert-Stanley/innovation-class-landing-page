@@ -41,6 +41,10 @@ body {
 .text-azul-marinho {
   color: #00264e !important;
 }
+.text-dark-grey {
+  color: #303030;
+}
+
 /* TIPOGRAFIA */
 .fs-14 {
   font-size: 14px;
@@ -583,5 +587,31 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
 
   .banner-desconto {
     font-size: 45px;
+  }
+}
+
+/* ==========================================================================
+ESTILOS CAROUSEL
+========================================================================= */
+
+.carousel {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.header-carousel {
+  margin-top: 4rem;
+  display: flex;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .carousel {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .ver-mais {
+    text-decoration: underline !important;
   }
 }
