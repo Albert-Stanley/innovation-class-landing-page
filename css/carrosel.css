@@ -2,6 +2,10 @@
    ESTILOS CAROUSEL (Complementares)
 ========================================================================= */
 
+.carousel-section {
+  font-family: "Nunito Sans", sans-serif;
+}
+
 .header-carousel {
   margin-top: 4rem;
   display: flex;
@@ -96,9 +100,10 @@
 }
 
 .novo-badge {
-  font-size: 0.7rem;
+  font-size: 10px;
   font-weight: 700;
   padding: 0.3em 0.5em;
+  line-height: 16px;
   z-index: 1;
   background-color: #00264e;
 }
