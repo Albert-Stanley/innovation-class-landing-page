@@ -477,6 +477,14 @@ BANNER ESTILOS - MOBILE PRIMEIRO (< 768px)
   letter-spacing: 1.5px;
 }
 
+/* RESPONSIVIDADE TELAS ENTRE 448PX E 768PX */
+
+@media (min-width: 448px) and (max-width: 768px) {
+  .banner-imagem-esquerda img {
+    width: auto;
+  }
+}
+
 /* ==========================================================================
 BANNER RESPONSIVIDADE - TELAS ACIMA 768px
 ========================================================================= */
