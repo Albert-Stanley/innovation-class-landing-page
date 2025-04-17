@@ -21,6 +21,7 @@
 
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/carrosel.css" />
   </head>
 
   <body>
@@ -455,34 +456,397 @@
     </div>
 
     <!-- Carrosel Lançamentos -->
-
-    <section class="carousel">
-      <header class="header-carousel">
-        <p class="fs-20 fw-bold text-decoration-none">Lançamentos</p>
+    <section class="carousel-section container mt-5">
+      <header class="header-carousel position-relative mb-3">
+        <h2 class="fs-20 fw-bold text-dark mb-0">Lançamentos</h2>
         <a
           href="#"
-          class="fs-14 fw-bold text-decoration-none text-dark-grey position-absolute end-0 ver-mais"
+          class="fs-14 fw-bold text-decoration-none text-dark-grey position-absolute top-0 end-0 ver-mais"
           >Ver mais</a
         >
       </header>
 
-      <div class="carousel-cards"></div>
-    </section>
+      <div id="productCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row g-3">
+              <div class="col-6 col-lg product-card-wrapper">
+                <div class="card h-100 position-relative">
+                  <span
+                    class="badge position-absolute top-0 start-0 m-2 novo-badge"
+                    >NOVO</span
+                  >
+                  <img
+                    src="/assets/images/modelo-card-carrosel.png"
+                    class="card-img-top"
+                    alt="Modelo vestindo camiseta branca"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title fs-16 fw-bold">
+                      Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
 
-    <!-- <article class="my-10 lg:flex lg:justify-center">
-      <div class="flex justify-center">
-        <img src="./assets/images/caneca-avanti.png" alt="Foto de uma caneca preta escrita Avanti" class="w-full sm:w-[652px]">
-        
-      </div>
-      <div class="flex justify-center items-center w-auto lg:w-[525px]">
-        <div class="font-nunito m-6 w-full text-center max-w-[652px]">
-          <h2 class="font-nunito font-bold text-3xl pb-3">LOREM IPSUM</h2>
-          <p class="text-base font-normal">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
-          </br>
-          <p class="text-base font-normal">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue</p>
+                    <div class="mt-auto">
+                      <div class="price-section mb-2">
+                        <span
+                          class="text-muted text-decoration-line-through me-2"
+                          >R$ 100,00</span
+                        >
+                        <span class="badge discount-badge">10% OFF</span>
+                      </div>
+                      <p class="fw-bold fs-18 real-price mb-1">R$ 79,90</p>
+                      <p class="fs-12 text-muted mb-3">
+                        Ou em até <strong> 10x de R$ 7,90</strong>
+                      </p>
+                      <a href="#" class="btn btn-primary w-100">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg product-card-wrapper">
+                <div class="card h-100 position-relative">
+                  <span
+                    class="badge position-absolute top-0 start-0 m-2 novo-badge"
+                    >NOVO</span
+                  >
+                  <img
+                    src="/assets/images/modelo-card-carrosel.png"
+                    class="card-img-top"
+                    alt="Modelo vestindo camiseta branca"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title fs-16 fw-bold">
+                      Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+
+                    <div class="mt-auto">
+                      <div class="price-section mb-2">
+                        <span
+                          class="text-muted text-decoration-line-through me-2"
+                          >R$ 100,00</span
+                        >
+                        <span class="badge discount-badge">10% OFF</span>
+                      </div>
+                      <p class="fw-bold fs-18 mb-1">R$ 79,90</p>
+                      <p class="fs-12 text text-muted mb-3">
+                        Ou em até <strong>10x de R$ 7,90</strong>
+                      </p>
+                      <a href="#" class="btn btn-primary w-100">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg product-card-wrapper d-none d-lg-block">
+                <div class="card h-100 position-relative">
+                  <span
+                    class="badge position-absolute top-0 start-0 m-2 novo-badge"
+                    >NOVO</span
+                  >
+                  <img
+                    src="/assets/images/modelo-card-carrosel.png"
+                    class="card-img-top"
+                    alt="Modelo vestindo camiseta branca"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title fs-16 fw-bold">
+                      Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+
+                    <div class="mt-auto">
+                      <div class="price-section mb-2">
+                        <span
+                          class="text-muted text-decoration-line-through me-2"
+                          >R$ 100,00</span
+                        >
+                        <span class="badge discount-badge">10% OFF</span>
+                      </div>
+                      <p class="fw-bold fs-18 mb-1">R$ 79,90</p>
+                      <p class="fs-12 text-muted mb-3">
+                        Ou em até <strong> 10x de R$ 7,90</strong>
+                      </p>
+                      <a href="#" class="btn btn-primary w-100">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg product-card-wrapper d-none d-lg-block">
+                <div class="card h-100 position-relative">
+                  <span
+                    class="badge position-absolute top-0 start-0 m-2 novo-badge"
+                    >NOVO</span
+                  >
+                  <img
+                    src="/assets/images/modelo-card-carrosel.png"
+                    class="card-img-top"
+                    alt="Modelo vestindo camiseta branca"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title fs-16 fw-bold">
+                      Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+
+                    <div class="mt-auto">
+                      <div class="price-section mb-2">
+                        <span
+                          class="text-muted text-decoration-line-through me-2"
+                          >R$ 100,00</span
+                        >
+                        <span class="badge discount-badge">10% OFF</span>
+                      </div>
+                      <p class="fw-bold fs-18 mb-1">R$ 79,90</p>
+                      <p class="fs-12 text-muted mb-3">
+                        Ou em até <strong> 10x de R$ 7,90</strong>
+                      </p>
+                      <a href="#" class="btn btn-primary w-100">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg product-card-wrapper d-none d-lg-block">
+                <div class="card h-100 position-relative">
+                  <span
+                    class="badge position-absolute top-0 start-0 m-2 novo-badge"
+                    >NOVO</span
+                  >
+                  <img
+                    src="/assets/images/modelo-card-carrosel.png"
+                    class="card-img-top"
+                    alt="Modelo vestindo camiseta branca"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title fs-16 fw-bold">
+                      Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+
+                    <div class="mt-auto">
+                      <div class="price-section mb-2">
+                        <span
+                          class="text-muted text-decoration-line-through me-2"
+                          >R$ 100,00</span
+                        >
+                        <span class="badge discount-badge">10% OFF</span>
+                      </div>
+                      <p class="fw-bold fs-18 mb-1">R$ 79,90</p>
+                      <p class="fs-12 text-muted mb-3">
+                        Ou em até <strong> 10x de R$ 7,90</strong>
+                      </p>
+                      <a href="#" class="btn btn-primary w-100">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-3">
+              <div class="col-6 col-lg product-card-wrapper">
+                <div class="card h-100 position-relative">
+                  <span
+                    class="badge position-absolute top-0 start-0 m-2 novo-badge"
+                    >NOVO</span
+                  >
+                  <img
+                    src="/assets/images/modelo-card-carrosel.png"
+                    class="card-img-top"
+                    alt="Modelo vestindo camiseta branca"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title fs-16 fw-bold">
+                      Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+
+                    <div class="mt-auto">
+                      <div class="price-section mb-2">
+                        <span
+                          class="text-muted text-decoration-line-through me-2"
+                          >R$ 100,00</span
+                        >
+                        <span class="badge discount-badge">10% OFF</span>
+                      </div>
+                      <p class="fw-bold fs-18 mb-1">R$ 79,90</p>
+                      <p class="fs-12 text-muted mb-3">
+                        Ou em até <strong> 10x de R$ 7,90</strong>
+                      </p>
+                      <a href="#" class="btn btn-primary w-100">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-lg product-card-wrapper">
+                <div class="card h-100 position-relative">
+                  <span
+                    class="badge position-absolute top-0 start-0 m-2 novo-badge"
+                    >NOVO</span
+                  >
+                  <img
+                    src="/assets/images/modelo-card-carrosel.png"
+                    class="card-img-top"
+                    alt="Modelo vestindo camiseta branca"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title fs-16 fw-bold">
+                      Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+
+                    <div class="mt-auto">
+                      <div class="price-section mb-2">
+                        <span
+                          class="text-muted text-decoration-line-through me-2"
+                          >R$ 100,00</span
+                        >
+                        <span class="badge discount-badge">10% OFF</span>
+                      </div>
+                      <p class="fw-bold fs-18 mb-1">R$ 79,90</p>
+                      <p class="fs-12 text-muted mb-3">
+                        Ou em até <strong> 10x de R$ 7,90</strong>
+                      </p>
+                      <a href="#" class="btn btn-primary w-100">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg product-card-wrapper d-none d-lg-block">
+                <div class="card h-100 position-relative">
+                  <span
+                    class="badge position-absolute top-0 start-0 m-2 novo-badge"
+                    >NOVO</span
+                  >
+                  <img
+                    src="/assets/images/modelo-card-carrosel.png"
+                    class="card-img-top"
+                    alt="Modelo vestindo camiseta branca"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title fs-16 fw-bold">
+                      Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+
+                    <div class="mt-auto">
+                      <div class="price-section mb-2">
+                        <span
+                          class="text-muted text-decoration-line-through me-2"
+                          >R$ 100,00</span
+                        >
+                        <span class="badge discount-badge">10% OFF</span>
+                      </div>
+                      <p class="fw-bold fs-18 mb-1">R$ 79,90</p>
+                      <p class="fs-12 text-muted mb-3">
+                        Ou em até <strong> 10x de R$ 7,90</strong>
+                      </p>
+                      <a href="#" class="btn btn-primary w-100">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg product-card-wrapper d-none d-lg-block">
+                <div class="card h-100 position-relative">
+                  <span
+                    class="badge position-absolute top-0 start-0 m-2 novo-badge"
+                    >NOVO</span
+                  >
+                  <img
+                    src="/assets/images/modelo-card-carrosel.png"
+                    class="card-img-top"
+                    alt="Modelo vestindo camiseta branca"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title fs-16 fw-bold">
+                      Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+
+                    <div class="mt-auto">
+                      <div class="price-section mb-2">
+                        <span
+                          class="text-muted text-decoration-line-through me-2"
+                          >R$ 100,00</span
+                        >
+                        <span class="badge discount-badge">10% OFF</span>
+                      </div>
+                      <p class="fw-bold fs-18 mb-1">R$ 79,90</p>
+                      <p class="fs-12 text-muted mb-3">
+                        Ou em até <strong> 10x de R$ 7,90</strong>
+                      </p>
+                      <a href="#" class="btn btn-primary w-100">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg product-card-wrapper d-none d-lg-block">
+                <div class="card h-100 position-relative">
+                  <span
+                    class="badge position-absolute top-0 start-0 m-2 novo-badge"
+                    >NOVO</span
+                  >
+                  <img
+                    src="/assets/images/modelo-card-carrosel.png"
+                    class="card-img-top"
+                    alt="Modelo vestindo camiseta branca"
+                  />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title fs-16 fw-bold">
+                      Lorem ipsum dolor sit amet consectetuer adipiscing elit
+                    </h3>
+
+                    <div class="mt-auto">
+                      <div class="price-section mb-2">
+                        <span
+                          class="text-muted text-decoration-line-through me-2"
+                          >R$ 100,00</span
+                        >
+                        <span class="badge discount-badge">10% OFF</span>
+                      </div>
+                      <p class="fw-bold fs-18 mb-1">R$ 79,90</p>
+                      <p class="fs-12 text-muted mb-3">
+                        Ou em até <strong> 10x de R$ 7,90</strong>
+                      </p>
+                      <a href="#" class="btn btn-primary w-100">Comprar</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#productCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#productCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <div class="carousel-indicators position-relative mt-3">
+          <button
+            type="button"
+            data-bs-target="#productCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#productCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
         </div>
       </div>
-    </article> -->
+    </section>
+
     <!-- JS do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JS Custom -->

@@ -1,0 +1,165 @@
+/* ==========================================================================
+   ESTILOS CAROUSEL (Complementares)
+========================================================================= */
+
+.header-carousel {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.fs-20 {
+  font-size: 1.25rem;
+}
+
+.fs-18 {
+  font-size: 1.125rem;
+}
+
+.fs-16 {
+  font-size: 1rem;
+}
+
+.fs-14 {
+  font-size: 0.875rem;
+}
+
+.fs-12 {
+  font-size: 0.75rem;
+}
+
+.text-dark-grey {
+  color: #303030;
+}
+
+.text-dark {
+  color: #000000;
+}
+
+/* --- Estilos específicos do Carrossel de Produtos --- */
+
+#productCarousel .carousel-control-prev,
+#productCarousel .carousel-control-next {
+  width: 5%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 40px;
+  opacity: 0.7;
+}
+
+#productCarousel .carousel-control-prev {
+  left: -15px;
+}
+
+#productCarousel .carousel-control-next {
+  right: -15px;
+}
+
+#productCarousel .carousel-control-prev-icon,
+#productCarousel .carousel-control-next-icon {
+  background-size: 60%;
+  filter: brightness(0) invert(1);
+}
+
+#productCarousel .carousel-control-prev:hover,
+#productCarousel .carousel-control-next:hover {
+  opacity: 1;
+}
+
+/* Estilos para os Indicadores (bolinhas) */
+#productCarousel .carousel-indicators button {
+  background-color: #838383;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: none;
+}
+
+#productCarousel .carousel-indicators .active {
+  background-color: #303030;
+}
+
+/* Estilos dos Cards */
+.product-card-wrapper .card {
+  border: 1px solid #eee;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card-wrapper .card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.novo-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3em 0.5em;
+  z-index: 1;
+  background-color: #00264e;
+}
+
+.discount-badge {
+  font-size: 11px;
+  padding: 0.5em 0.8em;
+  background-color: #5ec0be;
+  text-decoration: underline;
+  border-radius: 5px;
+}
+
+.real-price {
+  padding-top: -3rem;
+}
+
+.card-title.fs-16 {
+  min-height: 3em;
+  margin-bottom: 0.5rem;
+}
+
+.card-text.fs-14 {
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.price-section {
+  line-height: 1.2;
+}
+
+/* --- Media Queries Adicionais (Ajustes do seu CSS original) --- */
+@media (max-width: 991.98px) {
+  /* Abaixo de LG */
+  #productCarousel .carousel-control-prev {
+    left: 5px;
+  }
+  #productCarousel .carousel-control-next {
+    right: 5px;
+  }
+}
+
+@media (max-width: 700px) {
+  .carousel-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .ver-mais {
+    text-decoration: underline !important;
+  }
+
+  #productCarousel .carousel-control-prev,
+  #productCarousel .carousel-control-next {
+    display: none;
+    height: 30px;
+    width: 30px;
+  }
+  #productCarousel .carousel-control-prev {
+    left: -5px;
+  }
+  #productCarousel .carousel-control-next {
+    right: -5px;
+  }
+}

@@ -589,29 +589,3 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
     font-size: 45px;
   }
 }
-
-/* ==========================================================================
-ESTILOS CAROUSEL
-========================================================================= */
-
-.carousel {
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
-
-.header-carousel {
-  margin-top: 4rem;
-  display: flex;
-  text-decoration: none;
-}
-
-@media (max-width: 700px) {
-  .carousel {
-    margin-left: 4rem;
-    margin-right: 4rem;
-  }
-
-  .ver-mais {
-    text-decoration: underline !important;
-  }
-}
