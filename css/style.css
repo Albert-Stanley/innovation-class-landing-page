@@ -492,11 +492,15 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
   .banner-imagem-esquerda,
   .banner-texto {
     height: auto;
-    padding: 0 30px;
   }
 
   .banner-imagem-esquerda {
     overflow: visible;
+    padding-left: 200px;
+  }
+
+  .banner-texto {
+    padding-right: 200px;
   }
 
   .banner-imagem-esquerda img {
@@ -541,7 +545,20 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
   }
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1000px) {
+  .banner-titulo {
+    font-size: 30px;
+  }
+
+  .banner-subtitulo {
+    font-size: 12px;
+  }
+
+  .banner-desconto {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1300px) {
   .banner-titulo {
     font-size: 45px;
   }
@@ -555,7 +572,7 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1600px) {
+@media (min-width: 1300px) and (max-width: 1600px) {
   .banner-titulo {
     font-size: 65px;
   }
