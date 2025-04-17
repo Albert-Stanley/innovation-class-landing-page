@@ -31,9 +31,6 @@ body {
 .bg-roxo {
   background-color: #6220c1 !important;
 }
-.bg-cinza-claro-banner {
-  background-color: #e7e7ea !important;
-}
 
 .text-verde {
   color: #5ec0be !important;
@@ -421,7 +418,7 @@ BANNER ESTILOS - MOBILE PRIMEIRO (< 768px)
 ========================================================================= */
 
 .bg-cinza-claro-banner {
-  background-color: #d9d9d9;
+  background-color: #e7e7ea;
 }
 
 .banner-imagem-esquerda,
@@ -431,27 +428,29 @@ BANNER ESTILOS - MOBILE PRIMEIRO (< 768px)
   justify-content: center;
   align-items: center;
   height: 306px;
-  padding: 0 20px;
+  padding: 0;
+  border: none;
 }
 
-/* --- Coluna da Imagem (Mobile) --- */
 .banner-imagem-esquerda {
   overflow: hidden;
 }
 
 .banner-imagem-esquerda img {
-  width: 100%;
-  height: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 225px;
+  height: 306px;
   object-fit: cover;
-  object-position: 80% 50%;
+  object-position: right center;
+  mix-blend-mode: darken;
 }
 
-/* --- Coluna de Texto (Mobile) --- */
 .banner-texto {
   text-align: center;
 }
 
-/* --- Fontes e Estilos (Mobile) --- */
 .banner-titulo {
   font-size: 40px;
   line-height: 0.9;
@@ -470,12 +469,10 @@ BANNER ESTILOS - MOBILE PRIMEIRO (< 768px)
   display: block;
 }
 
-/* --- Pesos de Fonte --- */
 .fw-light {
   font-weight: 300;
 }
 
-/* --- Espaçamento de Letras (Mobile) --- */
 .letter-spacing-30 {
   letter-spacing: 1.5px;
 }
@@ -490,17 +487,18 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
     padding: 0 30px;
   }
 
-  /* --- Coluna da Imagem (Desktop Reset) --- */
   .banner-imagem-esquerda {
     overflow: visible;
   }
 
   .banner-imagem-esquerda img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     object-position: center;
+    mix-blend-mode: darken;
   }
 
-  /* --- Fontes e Estilos (Desktop/Web) --- */
   .banner-titulo {
     font-size: 100px;
     line-height: normal;
@@ -523,15 +521,14 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
     letter-spacing: 3px;
   }
 
-  /* Alinhamento central em telas grandes */
   .row.align-items-center {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza horizontalmente */
+    justify-content: center;
   }
 
   .col-md-6 {
-    flex: 0 0 50%; /* Garante que cada coluna ocupe 50% */
+    flex: 0 0 50%;
     max-width: 50%;
   }
 }
