@@ -589,3 +589,64 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
     font-size: 45px;
   }
 }
+
+/* ==========================================================================
+  Banner Destaque Caneca Avanti
+========================================================================= */
+.banner-caneca {
+  align-items: stretch;
+}
+
+.banner-caneca-img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .banner-caneca-img {
+    width: 55%;
+  }
+}
+
+.banner-caneca-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.banner-caneca-content {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .banner-caneca-content {
+    width: 45%;
+  }
+}
+
+.banner-caneca-title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .banner-caneca-title {
+    font-size: 24px;
+  }
+}
+
+.banner-caneca-text {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .banner-caneca-text {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================================================
+  Banner Destaque Caneca Avanti
+========================================================================= */
