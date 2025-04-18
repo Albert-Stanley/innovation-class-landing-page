@@ -72,7 +72,7 @@ body {
 }
 
 .letter-spacing-30 {
-  letter-spacing: 0.3em; /* 30% seria 0.3 vezes o tamanho da fonte */
+  letter-spacing: 0.3em;
 }
 
 h1,
@@ -217,7 +217,6 @@ h3 {
 .categories-trigger:hover .categories-text,
 .categories-trigger:hover .categories-icon {
   color: #005cff;
-  /* Altera a cor do texto e do ícone */
   font-weight: 700;
   filter: brightness(0) saturate(100%) invert(22%) sepia(99%) saturate(3865%)
     hue-rotate(213deg) brightness(97%) contrast(102%);
@@ -667,7 +666,7 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
 }
 
 .icone-pin {
-  width: 90px; /* ajuste conforme desejar */
+  width: 90px;
   height: auto;
 }
 
@@ -678,7 +677,7 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
   }
 
   .beneficio-item {
-    flex-direction: row; /* mantém ícone à esquerda */
+    flex-direction: row;
     align-items: flex-start;
     text-align: left;
     justify-content: center;
@@ -703,5 +702,119 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
   .icone-pin {
     width: 60px;
     height: 60px;
+  }
+}
+
+/* ==========================================================================
+  Formulário de cadastro de newsletter
+========================================================================= */
+.newsletter {
+  max-width: 1260px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.newsletter h2 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.newsletter h2 a {
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.newsletter-form {
+  background: #f1f1f1;
+  padding: 60px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  min-height: 176px;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"],
+.newsletter-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.newsletter-form .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.newsletter-form button {
+  background-color: #005cff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #0045c4;
+}
+
+@media (min-width: 768px) {
+  .newsletter-form {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+    padding: 40px;
+  }
+
+  .newsletter-form input[type="text"],
+  .newsletter-form input[type="email"] {
+    width: 280px;
+    padding: 10px;
+  }
+
+  .newsletter-form .checkbox {
+    flex-direction: row;
+    margin: 0;
+    gap: 6px;
+    white-space: nowrap;
+  }
+
+  .newsletter-form button {
+    padding: 10px 20px;
+    width: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .newsletter h2 {
+    font-size: 16px;
+  }
+
+  .newsletter-form button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .newsletter-form input[type="text"],
+  .newsletter-form input[type="email"] {
+    font-size: 12px;
+  }
+
+  .newsletter-form .checkbox {
+    font-size: 11px;
   }
 }

@@ -640,7 +640,7 @@
     </article>
 
     <!-- Carrosel 2 Lançamentos -->
-    <section class="carousel-section container mt-5">
+    <section class="carousel-section container mt-5 d-none d-md-block">
       <header class="header-carousel position-relative mb-3">
         <h2 class="fs-20 fw-bold text-dark mb-0"></h2>
         <a
@@ -649,7 +649,6 @@
           >Ver mais</a
         >
       </header>
-
       <div
         id="carouselInstance2"
         class="product-carousel carousel slide"
@@ -689,6 +688,42 @@
 
         <div class="carousel-indicators position-relative mt-3"></div>
       </div>
+    </section>
+
+    <!-- Banner Contato Responsivo -->
+    <section class="banner-contato">
+      <img
+        src="/assets/images/banner-contato-web.png"
+        alt="Banner Contato Web"
+        class="img-fluid w-100 d-none d-md-block"
+      />
+      <img
+        src="/assets/images/banner-contato-mobile.png"
+        alt="Banner Contato Mobile"
+        class="img-fluid w-100 d-block d-md-none"
+      />
+    </section>
+
+    <!-- Formulário de cadastro de newsletter -->
+    <section class="newsletter">
+      <h2>Cadastre-se na nossa <a href="#">newsletter</a></h2>
+
+      <form class="newsletter-form bg-cinza-claro">
+        <input type="text" placeholder="Digite seu nome" name="nome" required />
+        <input
+          type="email"
+          placeholder="Digite seu e-mail"
+          name="email"
+          required
+        />
+
+        <label class="checkbox">
+          <input type="checkbox" required />
+          Estou de acordo com a <a href="#">Política de Privacidade</a>
+        </label>
+
+        <button type="submit">Cadastrar</button>
+      </form>
     </section>
 
     <!-- JS do Bootstrap -->
