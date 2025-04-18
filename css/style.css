@@ -648,5 +648,60 @@ BANNER RESPONSIVIDADE - TELAS ACIMA 768px
 }
 
 /* ==========================================================================
-  Banner Destaque Caneca Avanti
+  Banner Beneficios Caneca Avanti
 ========================================================================= */
+
+.banner-beneficios-titulo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4f4f4f;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.beneficio-item p {
+  font-size: 16px;
+  margin: 0;
+  color: #4f4f4f;
+  max-width: 400px;
+}
+
+.icone-pin {
+  width: 90px; /* ajuste conforme desejar */
+  height: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .banner-beneficios-titulo {
+    font-size: 20px;
+  }
+
+  .beneficio-item {
+    flex-direction: row; /* mantém ícone à esquerda */
+    align-items: flex-start;
+    text-align: left;
+    justify-content: center;
+  }
+
+  .beneficio-item img {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  .banner-beneficios-caneca-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .banner-beneficios-caneca-text {
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .icone-pin {
+    width: 60px;
+    height: 60px;
+  }
+}
