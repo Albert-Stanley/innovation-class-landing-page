@@ -22,6 +22,7 @@
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/carrosel.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
 
   <body>
@@ -726,9 +727,291 @@
       </form>
     </section>
 
+    <!-- Footer Avanti -->
+    <footer class="bg-light text-dark pt-5">
+      <div class="container">
+        <!-- Logo e ícones sociais -->
+        <div class="text-center d-lg-none mb-5">
+          <a href="#">
+            <img
+              src="/assets/images/footer/icon-avanti.svg"
+              alt="Logo AVANTI"
+              width="152"
+              class="mb-4"
+            />
+          </a>
+          <div class="d-flex justify-content-center gap-lg-5 gap-4 gap-sm-4">
+            <img
+              src="/assets/images/footer/icon-instagram.svg"
+              alt="Instagram"
+              width="22"
+            />
+            <img
+              src="/assets/images/footer/icon-facebook.svg"
+              alt="Facebook"
+              width="12"
+            />
+            <img
+              src="/assets/images/footer/icon-youtube.svg"
+              alt="Youtube"
+              width="22"
+            />
+            <img
+              src="/assets/images/footer/icon-tiktok.svg"
+              alt="Tiktok"
+              width="22"
+            />
+          </div>
+        </div>
+
+        <!-- Acordeões Mobile -->
+        <div class="d-lg-none">
+          <div class="accordion" id="footerAccordion">
+            <!-- Institucional -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button fw-bold collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  Institucional
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#footerAccordion"
+              >
+                <div class="accordion-body">
+                  <p>Sobre Nós</p>
+                  <p>Nossas Lojas</p>
+                  <p>Privacidade e Segurança</p>
+                  <p>Termos e Condições</p>
+                </div>
+              </div>
+            </div>
+            <!-- Central de ajuda -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button fw-bold collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  Central de Ajuda
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#footerAccordion"
+              >
+                <div class="accordion-body">
+                  <p>Fale Conosco</p>
+                  <p>Frete e Entrega</p>
+                  <p>Trocas e Devoluções</p>
+                  <p>Formas de Pagamento</p>
+                  <p>FAQ</p>
+                </div>
+              </div>
+            </div>
+            <!-- Atendimento -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button fw-bold collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  Atendimento
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#footerAccordion"
+              >
+                <div class="accordion-body">
+                  <p><strong>Telefone:</strong> (00) 1234-5678</p>
+                  <p><strong>E-mail:</strong> exemplo@exemplo.com.br</p>
+                  <p>
+                    <strong>Horário de atendimento:</strong><br />
+                    Segunda a Sábado: 07h00 às 23h00<br />
+                    Domingos e Feriados: 07h00 às 21h00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Desktop -->
+        <div
+          class="d-none d-lg-flex justify-content-between align-items-start pb-5 gap-5 flex-wrap"
+        >
+          <!-- Logo e redes -->
+          <div class="d-flex flex-column align-items-start">
+            <a href="#">
+              <img
+                src="/assets/images/footer/icon-avanti.svg"
+                alt="Logo AVANTI"
+                width="152"
+                class="mb-4"
+              />
+            </a>
+            <div class="d-flex gap-4">
+              <img
+                src="/assets/images/footer/icon-instagram.svg"
+                alt="Instagram"
+                width="22"
+              />
+              <img
+                src="/assets/images/footer/icon-facebook.svg"
+                alt="Facebook"
+                width="12"
+              />
+              <img
+                src="/assets/images/footer/icon-youtube.svg"
+                alt="Youtube"
+                width="22"
+              />
+              <img
+                src="/assets/images/footer/icon-tiktok.svg"
+                alt="Tiktok"
+                width="22"
+              />
+            </div>
+          </div>
+
+          <!-- Institucional -->
+          <div class="d-flex flex-column">
+            <h6 class="fw-bold">Institucional</h6>
+            <p>Sobre Nós</p>
+            <p>Nossas Lojas</p>
+            <p>Privacidade e Segurança</p>
+            <p>Termos e Condições</p>
+          </div>
+
+          <!-- Central de Ajuda -->
+          <div class="d-flex flex-column">
+            <h6 class="fw-bold">Central de Ajuda</h6>
+            <p>Fale Conosco</p>
+            <p>Frete e Entrega</p>
+            <p>Trocas e Devoluções</p>
+            <p>Formas de Pagamento</p>
+            <p>FAQ</p>
+          </div>
+
+          <!-- Atendimento -->
+          <div class="d-flex flex-column">
+            <h6 class="fw-bold">Atendimento</h6>
+            <p><strong>Telefone:</strong> (00) 1234-5678</p>
+            <p><strong>E-mail:</strong> exemplo@exemplo.com.br</p>
+            <p>
+              <strong>Horário de atendimento:</strong><br />
+              Segunda a Sábado: 07h00 às 23h00<br />
+              Domingos e Feriados: 07h00 às 21h00
+            </p>
+          </div>
+        </div>
+
+        <!-- Bandeiras e formas de pagamento -->
+        <div class="text-center py-4">
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <img
+              src="/assets/images/footer/icon-amex.svg"
+              alt="Amex"
+              height="20"
+            />
+            <img
+              src="/assets/images/footer/icon-mastercard.svg"
+              alt="Mastercard"
+              height="20"
+            />
+            <img
+              src="/assets/images/footer/icon-visa.svg"
+              alt="Visa"
+              height="20"
+            />
+            <img
+              src="/assets/images/footer/icon-hipercard.svg"
+              alt="Hipercard"
+              height="20"
+            />
+            <img
+              src="/assets/images/footer/icon-elo.svg"
+              alt="Elo"
+              height="20"
+            />
+            <img
+              src="/assets/images/footer/icon-c.svg"
+              alt="Cartão C"
+              height="20"
+            />
+            <img
+              src="/assets/images/footer/icon-paypal.svg"
+              alt="Paypal"
+              height="20"
+            />
+            <img
+              src="/assets/images/footer/icon-pix.svg"
+              alt="Pix"
+              height="20"
+            />
+            <img
+              src="/assets/images/footer/icon-boleto.svg"
+              alt="Boleto"
+              height="20"
+            />
+          </div>
+        </div>
+
+        <!-- Texto e icons finais -->
+      </div>
+      <div class="text-center bg-white pt-5 px-3 pb-5">
+        <p class="small text-muted">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+          volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+          molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+          vero eros et accumsan et iusto odio dignissim qui blandit praesent
+          luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+        </p>
+        <div
+          class="d-flex flex-wrap justify-content-center gap-4 flex-lg-nowrap flex-wrap"
+        >
+          <div class="d-flex gap-4">
+            <img
+              src="/assets/images/footer/icon-lets-enc.svg"
+              alt="Let's Encrypt"
+            />
+            <img src="/assets/images/footer/icon-vtex-pci.svg" alt="VTEX PCI" />
+          </div>
+          <div class="d-flex gap-4">
+            <img
+              src="/assets/images/footer/icon-avanti.svg"
+              alt="Avanti Logo Pequena"
+              width="60"
+            />
+            <img
+              src="/assets/images/footer/icon-vtex.svg"
+              alt="VTEX Logo"
+              width="60"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- JS do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JS Custom -->
+    <!-- JS Customizados -->
     <script src="js/script.js"></script>
     <script src="js/carrosel.js"></script>
   </body>
