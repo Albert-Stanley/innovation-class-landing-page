@@ -1,6 +1,6 @@
-# Projeto 01 — Landing Page — Innovation Class (Desafio Front-End)
+# 🧪 Projeto 01 — Landing Page | Innovation Class (Desafio Front-End)
 
-[🌐 Acesse o projeto online](https://innovation-class-landing-page.vercel.app)
+🌐 Acesse e teste o projeto: [innovation-class-landing-page.vercel.app](https://innovation-class-landing-page.vercel.app)
 
 ## Desafio Técnico
 
