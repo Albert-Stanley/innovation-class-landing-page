@@ -1,3 +1,7 @@
+.text-azul-vibrante {
+  color: #005cff;
+}
+
 footer {
   background-color: #f5f5f5;
 }
@@ -6,6 +10,12 @@ footer p {
   margin: 0;
   font-size: 14px;
   color: #6c757d;
+  cursor: pointer;
+}
+
+footer p:hover {
+  color: #005cff;
+  text-decoration: underline;
 }
 
 footer h6 {

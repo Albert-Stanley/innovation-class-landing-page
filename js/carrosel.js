@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const productsData = [];
   const productTemplate = {
     imgSrc: "/assets/images/modelo-card-carrosel.png",
-    imgAlt: "Modelo vestindo camiseta branca", // Deixando genérico ou adicione número no loop se preferir
+    imgAlt: "Modelo vestindo camiseta branca",
     title: "Lorem ipsum dolor sit amet consectetuer adipiscing elit",
     oldPrice: "R$ 100,00",
     newPrice: "R$ 79,90",
@@ -15,23 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   for (let i = 0; i < 15; i++) {
-    // Cria uma cópia do template para cada produto
-    // Se quiser diferenciar um pouco para teste, pode adicionar (i+1) no título/alt:
-    // productsData.push({
-    //   ...productTemplate,
-    //   imgAlt: `Modelo vestindo camiseta branca ${i + 1}`,
-    //   title: `Lorem ipsum dolor sit amet consectetuer ${i + 1}`
-    // });
-    // Mas para ter EXATAMENTE o template:
     productsData.push({ ...productTemplate });
   }
 
   // --- 2. Configurações ---
-  const itemsPerSlideDesktop = 5; // Quantos itens mostrar em telas grandes (lg)
-  const itemsPerSlideMobile = 2; // Quantos itens mostrar em telas pequenas
-  const totalIndicators = 3; // Número de indicadores/slides desejado
+  const itemsPerSlideDesktop = 5;
+  const itemsPerSlideMobile = 2;
+  const totalIndicators = 3;
 
-  // --- 3. Função para Gerar o HTML de um Card de Produto (SEM ALTERAÇÕES) ---
+  // --- 3. Função para Gerar o HTML de um Card de Produto  ---
   function createProductCardHTML(product, index, itemsPerSlideLg) {
     const isInitiallyHiddenOnMobile =
       index % itemsPerSlideLg >= itemsPerSlideMobile;
@@ -60,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <p class="fs-12 text text-muted mb-3">
                 Ou em até <strong>${product.installments}</strong>
               </p>
-              <a href="${product.productUrl}" class="btn btn-primary w-100 mb-0">Comprar</a>
+              <button class="btn btn-primary w-100 mb-0">Comprar</button>
             </div>
           </div>
         </div>
@@ -121,13 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
           );
         });
       } else {
-        // Opcional: Adicionar uma mensagem ou deixar o slide vazio se não houver produtos suficientes
         console.warn(
           `Slide ${
             i + 1
           } para o carrossel #${carouselId} não tem produtos suficientes.`
         );
-        // row.innerHTML = '<p class="text-center w-100">Sem mais produtos para exibir.</p>'; // Exemplo
       }
 
       carouselItem.appendChild(row);
@@ -149,7 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     new bootstrap.Carousel(carouselElement, {
       interval: false,
-      // wrap: true // Descomente se quiser que o carrossel volte ao início
     });
   }
 
@@ -160,11 +149,5 @@ document.addEventListener("DOMContentLoaded", function () {
     productsData // Usando o array padronizado e com 15 itens
   );
 
-  initializeCarousel(
-    "carouselInstance2",
-    "Lançamentos",
-    // Usando o mesmo array para o segundo carrossel.
-    // Se quiser dados diferentes, crie outro array de 15 itens.
-    productsData
-  );
-}); // Fim do DOMContentLoaded
+  initializeCarousel("carouselInstance2", "Lançamentos", productsData);
+});
