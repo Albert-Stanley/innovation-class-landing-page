@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // --- 1. Dados dos Produtos PADRONIZADOS (15 itens) ---
-  // Array com 15 produtos, todos usando o template fornecido.
+  // 1- Criação de um array de produtos fictícios (15 itens) a partir de um modelo padrão
   const productsData = [];
   const productTemplate = {
     imgSrc: "/assets/images/modelo-card-carrosel.png",
@@ -90,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     headerTitle.textContent = carouselTitle;
 
     const productsPerFullSlide = itemsPerSlideDesktop;
-    const totalSlides = totalIndicators; // Usando o número definido
+    const totalSlides = totalIndicators;
 
     for (let i = 0; i < totalSlides; i++) {
       const carouselItem = document.createElement("div");
@@ -143,11 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // --- 5. Inicializar os Carrosséis na Página ---
-  initializeCarousel(
-    "carouselInstance1",
-    "Lançamentos",
-    productsData // Usando o array padronizado e com 15 itens
-  );
+  initializeCarousel("carouselInstance1", "Lançamentos", productsData);
 
   initializeCarousel("carouselInstance2", "Lançamentos", productsData);
 });

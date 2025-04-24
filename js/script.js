@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Inicializa a funcionalidade de busca para os formulários (mobile e desktop)
   function setupSearch(inputId, feedbackId, formSelector) {
     const input = document.getElementById(inputId);
     const feedback = document.getElementById(feedbackId);
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Configura a busca separadamente para mobile e desktop
   setupSearch(
     "searchInputMobile",
     "searchFeedbackMobile",
@@ -29,4 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
     "searchFeedbackDesktop",
     ".d-lg-flex .search-container"
   );
+});
+
+// Impede que os links falsos naveguem para outro lugar, mantendo apenas o visual de link
+document.querySelectorAll(".fake-link").forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
 });
