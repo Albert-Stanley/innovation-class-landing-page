@@ -196,7 +196,6 @@ h3 {
   color: #555;
 }
 
-/* Estilos Gerais */
 .mega-menu {
   display: none;
   position: absolute;
@@ -411,7 +410,11 @@ h3 {
   font-weight: 700;
 }
 
-@media (min-width: 980px) and (max-width: 1370px) {
+.gap-responsivo {
+  gap: 1.7rem;
+}
+
+@media (min-width: 980px) and (max-width: 1200px) {
   .department-trigger {
     font-size: 12px;
     padding-right: 0;
@@ -419,6 +422,25 @@ h3 {
 
   .categories-text {
     font-size: 12px;
+  }
+
+  .gap-responsivo {
+    gap: 0.1rem;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .department-trigger {
+    font-size: 13px;
+    padding-right: 0;
+  }
+
+  .categories-text {
+    font-size: 13px;
+  }
+
+  .gap-responsivo {
+    gap: 0.8rem;
   }
 }
 
