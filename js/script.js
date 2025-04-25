@@ -1,26 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Inicializa a funcionalidade de busca para os formulários (mobile e desktop)
   function setupSearch(inputId, feedbackId, formSelector) {
     const input = document.getElementById(inputId);
     const feedback = document.getElementById(feedbackId);
     const form = document.querySelector(formSelector);
+    const feedbackText = feedback?.querySelector(".feedback-text");
+    const closeButton = feedback?.querySelector(".close-feedback");
 
-    if (!input || !feedback || !form) return;
+    if (!input || !feedback || !form || !feedbackText || !closeButton) return;
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       const term = input.value.trim();
 
       if (term) {
-        feedback.textContent = `Você buscou por: '${term}'`;
+        feedbackText.textContent = `Você buscou por: '${term}'`;
         feedback.classList.remove("d-none");
+        requestAnimationFrame(() => feedback.classList.add("show")); // fade in
       } else {
-        feedback.classList.add("d-none");
+        feedback.classList.remove("show");
+        setTimeout(() => feedback.classList.add("d-none"), 300); // fade out
       }
+    });
+
+    closeButton.addEventListener("click", function () {
+      feedback.classList.remove("show");
+      setTimeout(() => feedback.classList.add("d-none"), 300);
     });
   }
 
-  // Configura a busca separadamente para mobile e desktop
   setupSearch(
     "searchInputMobile",
     "searchFeedbackMobile",
@@ -31,6 +38,30 @@ document.addEventListener("DOMContentLoaded", function () {
     "searchFeedbackDesktop",
     ".d-lg-flex .search-container"
   );
+
+  document.addEventListener("click", function (e) {
+    const feedbacks = [
+      document.getElementById("searchFeedbackMobile"),
+      document.getElementById("searchFeedbackDesktop"),
+    ];
+    const inputs = [
+      document.getElementById("searchInputMobile"),
+      document.getElementById("searchInputDesktop"),
+    ];
+
+    feedbacks.forEach((feedback, index) => {
+      const input = inputs[index];
+      if (
+        feedback &&
+        !feedback.classList.contains("d-none") &&
+        !feedback.contains(e.target) &&
+        !input.contains(e.target)
+      ) {
+        feedback.classList.remove("show");
+        setTimeout(() => feedback.classList.add("d-none"), 300);
+      }
+    });
+  });
 });
 
 // Impede que os links falsos naveguem para outro lugar, mantendo apenas o visual de link

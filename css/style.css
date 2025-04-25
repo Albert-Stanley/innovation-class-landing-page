@@ -164,11 +164,36 @@ h3 {
   z-index: 2;
 }
 .search-feedback {
-  padding-top: 1rem;
+  top: 100%;
+  position: absolute;
   font-size: 14px;
-  color: #000000;
-  display: block;
-  margin-bottom: -1.2rem;
+  color: #000;
+  background: #f1f1f1;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  gap: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.search-feedback.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.close-feedback {
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  color: #555;
 }
 
 /* Estilos Gerais */
@@ -198,9 +223,9 @@ h3 {
   display: block;
   opacity: 1;
   visibility: visible;
-  pointer-events: auto; /* Permite interação quando visível */
-  transform: translateY(0); /* Retorna à posição normal */
-  transition: opacity 0.3s ease, visibility 0s linear 0s, transform 0.3s ease; /* Transição para mostrar */
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, visibility 0s linear 0s, transform 0.3s ease;
 }
 
 .categories-trigger {
@@ -418,7 +443,7 @@ h3 {
   margin-right: 1rem;
 }
 /* ==========================================================================
-BANNER ESTILOS - MOBILE PRIMEIRO (< 768px)
+BANNER ESTILOS - MOBILE FIRST (< 768px)
 ========================================================================= */
 
 .bg-cinza-claro-banner {
